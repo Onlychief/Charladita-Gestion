@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión Restaurante - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="login-card" class="card" aria-labelledby="login-title">
+        <h1 id="login-title">Acceso al sistema</h1>
+        <p class="subtitle">Ingresa para registrar compras, ventas e informes.</p>
+
+        <form id="login-form" novalidate>
+          <label for="username">Usuario</label>
+          <input id="username" name="username" type="text" autocomplete="username" required />
+
+          <label for="password">Contraseña</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+
+          <button type="submit">Iniciar sesión</button>
+          <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="hint">
+          <strong>Demo:</strong> usuario <code>admin</code>, contraseña <code>admin123</code>
+        </div>
+      </section>
+
+      <section id="dashboard-card" class="card hidden" aria-labelledby="dashboard-title">
+        <h2 id="dashboard-title">Bienvenido, <span id="user-display"></span></h2>
+        <p>Login completado. En el siguiente paso podemos construir compras, ventas e informes por fecha.</p>
+        <button id="logout-btn" class="secondary" type="button">Cerrar sesión</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
